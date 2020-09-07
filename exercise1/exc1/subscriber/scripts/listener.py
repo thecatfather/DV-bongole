@@ -33,18 +33,19 @@
 #
 # Revision $Id$
 
-
+## Simple talker demo that listens to std_msgs/Strings published 
+## to the 'chatter' topic
 
 import rospy
 from std_msgs.msg import Int64, Float64
 
-def callback(data):
-#def talker():
-    pub = rospy.Publisher('kthfs/result', Float64, queue_size=10)
+pub = rospy.Publisher('kthfs/result', Float64, queue_size=10)
 
-    hello_str = int(data.data)/0.15
-    rospy.loginfo(hello_str)
-    pub.publish(hello_str)
+def callback(data):
+    q = 0.15
+    info = int(data.data)/q
+    rospy.loginfo(info)
+    pub.publish(info)
 
 
 def listener():
@@ -53,8 +54,9 @@ def listener():
     rospy.init_node('listener', anonymous=True)
 
     rospy.Subscriber('Bongole', Int64, callback)
+    
 
-
+    # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
 
 if __name__ == '__main__':
