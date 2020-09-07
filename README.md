@@ -3,7 +3,7 @@ The folder "exercise1" contains only the ROS src files and the folder "exercise2
 
 How I run the ros program:
 
-1) Create 4 terminals and navigate into catkin workspace which contains src folder contents as given.
+1) Create 4 terminals or use terminator and navigate into catkin workspace which contains src folder contents as given.
 
 2) In the all terminals run command: ```source ./devel/setup.bash```
 
