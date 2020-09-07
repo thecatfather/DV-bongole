@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tck
-import numpy as np
 import matplotlib.animation as animation
+
+import numpy as np
+
 
 class Visualization:
     def __init__(self,t_speed,t_max):
