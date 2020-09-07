@@ -34,7 +34,6 @@
 # Revision $Id$
 
 
-
 import rospy
 from std_msgs.msg import Int64
 
@@ -44,10 +43,10 @@ def talker():
     rate = rospy.Rate(20) # 20hz
     k=1
     while not rospy.is_shutdown():
-        #hello_str = "%s" % rospy.get_time()
-	hello_str = k
-        rospy.loginfo(hello_str)
-        pub.publish(hello_str)
+
+	info = k
+        rospy.loginfo(info)
+        pub.publish(info)
 	k+=4
         rate.sleep()
 

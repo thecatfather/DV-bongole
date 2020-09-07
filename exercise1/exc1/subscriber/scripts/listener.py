@@ -33,8 +33,6 @@
 #
 # Revision $Id$
 
-## Simple talker demo that listens to std_msgs/Strings published 
-## to the 'chatter' topic
 
 import rospy
 from std_msgs.msg import Int64, Float64
@@ -49,14 +47,8 @@ def callback(data):
 
 
 def listener():
-
-
     rospy.init_node('listener', anonymous=True)
-
     rospy.Subscriber('Bongole', Int64, callback)
-    
-
-    # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
 
 if __name__ == '__main__':
