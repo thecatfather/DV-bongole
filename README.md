@@ -17,7 +17,7 @@ How I run the ros program:
 
 7) Choose streaming and then choose start topic subscriber and choose topic ```/kthfs/result``` and drag ```kthfs/result/data``` to white screen to plot graph.
 
-How to run Visualization program and its features:
+How to run the Visualization program and its features:
 
 1) Run using command: ```python Visualization.py```
 
