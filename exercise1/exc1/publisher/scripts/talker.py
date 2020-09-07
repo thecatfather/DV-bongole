@@ -33,8 +33,7 @@
 #
 # Revision $Id$
 
-## Simple talker demo that published std_msgs/Strings messages
-## to the 'chatter' topic
+
 
 import rospy
 from std_msgs.msg import Int64

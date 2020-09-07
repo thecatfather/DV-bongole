@@ -33,8 +33,7 @@
 #
 # Revision $Id$
 
-## Simple talker demo that listens to std_msgs/Strings published 
-## to the 'chatter' topic
+
 
 import rospy
 from std_msgs.msg import Int64, Float64
@@ -42,29 +41,20 @@ from std_msgs.msg import Int64, Float64
 def callback(data):
 #def talker():
     pub = rospy.Publisher('kthfs/result', Float64, queue_size=10)
-    #rospy.init_node('talker', anonymous=True)
-    #rate = rospy.Rate(20) # 20hz
-    #k=1
-    #while not rospy.is_shutdown():
-        #hello_str = "%s" % rospy.get_time()
+
     hello_str = int(data.data)/0.15
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
-	#k+=4
-    #rate.sleep()
+
 
 def listener():
 
-    # In ROS, nodes are uniquely named. If two nodes with the same
-    # name are launched, the previous one is kicked off. The
-    # anonymous=True flag means that rospy will choose a unique
-    # name for our 'listener' node so that multiple listeners can
-    # run simultaneously.
+
     rospy.init_node('listener', anonymous=True)
 
     rospy.Subscriber('Bongole', Int64, callback)
 
-    # spin() simply keeps python from exiting until this node is stopped
+
     rospy.spin()
 
 if __name__ == '__main__':
