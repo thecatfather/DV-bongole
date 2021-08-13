@@ -5,7 +5,7 @@ How I run the ros program:
 
 1) Create 4 terminals or use terminator and navigate into catkin workspace which contains src folder contents as given.
 
-2) In the all terminals run command: ```source ./devel/setup.bash```
+2) In all the terminals run command: ```source ./devel/setup.bash```
 
 3) In first terminal, run roscore with command: ```roscore```
 
